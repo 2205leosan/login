@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  overflow: hidden;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, rgb(255, 255, 255), #9b9b9b);
+  background-size: cover;
+  background-position: center;
+}
+section .color {
+  position: absolute;
+  filter: blur(150px);
+}
+section .color:nth-child(1) {
+  top: -350px;
+  background: #5c55e6;
+  width: 600px;
+  height: 600px;
+}
+section .color:nth-child(2) {
+  bottom: -150px;
+  left: 100px;
+  background: #7c06a6;
+  width: 500px;
+  height: 500px;
+}
+section .color:nth-child(3) {
+  bottom: 50px;
+  right: 0;
+  background: #0639a6;
+  width: 300px;
+  height: 300px;
+}
+section .box {
+  position: relative;
+}
+section .box .cuadrado {
+  content: "";
+  position: absolute;
+  border-radius: 10px;
+  background: rgba(228, 8, 209, 0.1);
+  border: 1px solid rgba(186, 186, 186, 0.6);
+  border-right: 1px solid rgba(75, 75, 75, 0.2);
+  border-bottom: 1px solid rgba(56, 55, 55, 0.2);
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  -webkit-animation: volar 10s linear infinite;
+          animation: volar 10s linear infinite;
+  -webkit-animation-delay: calc(-1s * var(--i));
+          animation-delay: calc(-1s * var(--i));
+}
+section .box .cuadrado:nth-child(1) {
+  top: 50px;
+  left: 350px;
+  width: 100px;
+  height: 100px;
+}
+section .box .cuadrado:nth-child(2) {
+  top: 150px;
+  left: -100px;
+  width: 120px;
+  height: 120px;
+  z-index: 2;
+}
+section .box .cuadrado:nth-child(3) {
+  bottom: 50px;
+  right: -60px;
+  width: 80px;
+  height: 80px;
+  z-index: 2;
+}
+section .box .cuadrado:nth-child(4) {
+  bottom: -80px;
+  left: 100px;
+  width: 50px;
+  height: 50px;
+}
+section .box .cuadrado:nth-child(5) {
+  top: -80px;
+  left: 140px;
+  width: 60px;
+  height: 60px;
+  z-index: 2;
+}
+section .box .container {
+  position: relative;
+  width: 400px;
+  min-height: 400px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: rgba(101, 90, 90, 0.2);
+  border-bottom: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+}
+section .box .container .form {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  box-sizing: border-box;
+}
+section .box .container .form h2 {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+section .box .container .form h2:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 80px;
+  height: 4px;
+  background: #fff;
+}
+section .box .container .form .inputbox {
+  width: 100%;
+  margin-top: 20px;
+}
+section .box .container .form .inputbox input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 35px;
+  background: rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  outline: none;
+  font-size: 1em;
+  letter-spacing: 1px;
+  color: #fff;
+  font-weight: 600;
+}
+section .box .container .form .inputbox input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.64);
+}
+section .box .container .form .inputbox input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.64);
+}
+section .box .container .form .inputbox input::placeholder {
+  color: rgba(255, 255, 255, 0.64);
+}
+section .box .container .form .inputbox input[type=submit] {
+  background: #ffffff;
+  color: #666;
+  border: none;
+  font-weight: 600;
+  max-width: 100px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+section .box .container .form p {
+  margin-top: 5px;
+  color: #fff;
+  padding: 2px;
+}
+section .box .container .form p a {
+  color: #fff;
+  font-weight: 600;
+}
+@-webkit-keyframes volar {
+  0%, 100% {
+    transform: translateY(-80px);
+  }
+  50% {
+    transform: translateY(40px);
+  }
+}
+@keyframes volar {
+  0%, 100% {
+    transform: translateY(-80px);
+  }
+  50% {
+    transform: translateY(40px);
+  }
+}/*# sourceMappingURL=style.css.map */
